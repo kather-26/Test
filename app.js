@@ -7,7 +7,7 @@ const app = express();
 const pool = new Pool({
   user: 'postgres',
   password: 'networkcard',
-  host: 'localhost',
+  host: 'mydatabase-instance.cxtwajouzpmw.ap-northeast-1.rds.amazonaws.com',
   database: 'Test',
   port: 5432 // default PostgreSQL port
 });
@@ -36,6 +36,6 @@ app.get('/api/users/:username/password/:password', async (req, res) => {
 
   
 
-app.listen(5000, () => {
-  console.log('Server listening on port 5000');
+app.listen(6000, () => {
+  console.log('Server listening on port 6000');
 });
